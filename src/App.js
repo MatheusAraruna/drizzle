@@ -1,12 +1,15 @@
-import'./App.scss'
+import React from 'react'
 
-import Bar from './components/Bar'
+import { DataProvider} from './context/DataContext'
+
+import Main from './pages/Main'
+
 
 function App() {
   return (
-   <div className="App">
-     <Bar />
-   </div>
+    <DataProvider>
+      <Main />
+    </DataProvider>
   );
 }
 

@@ -1,0 +1,66 @@
+@import '../../styles/colors.scss';
+
+.tableau{
+    display: block;
+    max-width: 1280px;
+    height: calc(100% - 150px);
+    margin:0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    > div{
+        width: calc(100% - 40px);
+        margin:0 20px;
+        display: flex;
+    }
+    .main-data{
+        align-items: center;
+        justify-content: flex-start;
+        gap:50px;
+        .temperature{
+            h1{
+                font-size: 288px;
+                color:var(--white);
+            }
+        }
+        .condition{
+            p{
+                font-size:48px;
+                color:var(--black);
+                > svg{
+                    font-size: 35px !important;
+                    margin-right: 15px;
+                }
+            }
+            span{
+                font-size: 144px;
+                color:var(--white);
+            }
+        }
+    }
+    .sub-data{
+        align-items: center;
+        .forecasts{
+            display: flex;
+            gap: 10px;
+        }
+        .observations{
+            margin-left:50px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap:20px 50px;
+            div{
+                span{
+                    color:var(--yellow);
+                    font-size: 24px;
+                }
+                p{
+                    margin-left:10px;
+                    font-size:14px;
+                    color:var(--white);
+                }
+            }
+        }
+    }
+}

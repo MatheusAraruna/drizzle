@@ -1,0 +1,21 @@
+@import'../../styles/colors.scss';
+.card{
+    width: 95px;
+    height: 170px;
+    background: var(--yellow);
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:15px;
+    span{
+        text-transform: uppercase;
+        color:var(--blue);
+        font-size: 24px;
+    }
+    svg{
+        color:var(--blue);
+        font-size:2.5em;
+    }
+}

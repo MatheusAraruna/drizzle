@@ -1,0 +1,63 @@
+[
+   
+    {
+        "code":33,
+        "text":"fair (night)"
+    },
+    {
+        "code":34,
+        "text":"fair (day)"
+    },
+    {
+        "code":35,
+        "text":"mixed rain and hail"
+    },
+    {
+        "code":36,
+        "text":"hot"
+    },
+    {
+        "code":37,
+        "text":"isolated thunderstorms"
+    },
+    {
+        "code":38,
+        "text":"scattered thunderstorms"
+    },
+    {
+        "code":39,
+        "text":"scattered showers (day)"
+    },
+    {
+        "code":40,
+        "text":"heavy rain"
+    },
+    {
+        "code":41,
+        "text":"scattered snow showers (day)"
+    },
+    {
+        "code":42,
+        "text":"heavy snow"
+    },
+    {
+        "code":43,
+        "text":"blizzard"
+    },
+    {
+        "code":44,
+        "text":"not avaliable"
+    },
+    {
+        "code":45,
+        "text":"scattered showers (night)"
+    },
+    {
+        "code":46,
+        "text":"scattered snow showers (night)"
+    },
+    {
+        "code":47,
+        "text":"scattered thundershowers"
+    }
+]
