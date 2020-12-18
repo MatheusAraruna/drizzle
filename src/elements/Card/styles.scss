@@ -1,21 +1,32 @@
 @import'../../styles/colors.scss';
 .card{
-    width: 95px;
-    height: 170px;
+    width: 70px;
+    height: 140px;
     background: var(--yellow);
     border-radius: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap:15px;
+    gap:10px;
     span{
         text-transform: uppercase;
         color:var(--blue);
-        font-size: 24px;
+        font-size: 22px;
     }
     svg{
         color:var(--blue);
-        font-size:2.5em;
+        font-size:2.2em;
+    }
+    @media only screen and (max-width:512px){
+        width: 50px;
+        height: 100px;
+        gap:5px;
+        span{
+            font-size: 18px;
+        }
+        svg{
+            font-size: 1.8em;
+        }
     }
 }

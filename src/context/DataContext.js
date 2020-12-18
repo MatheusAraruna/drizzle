@@ -13,7 +13,6 @@ function DataProvider({children}){
         .catch(err=>alert(err))
         setWheater(res)
         setActive(res)
-        console.log(res)
     }
     return  <Context.Provider value={{ request, active, wheater }}>
                 {children}

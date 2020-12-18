@@ -1,20 +1,22 @@
 import React, { useContext } from 'react';
 import { Context } from '../../context/DataContext'
-import Card from '../../elements/Card'
 import { FaMapMarkerAlt } from 'react-icons/fa'
+
+import parseToCelcius from '../../utils/parseToCelcius'
+import returnAverage from '../../utils/returnAverage'
+
+import Card from '../../elements/Card'
+
 import'./styles.scss'
 
 function Tableau() {
     const { wheater } = useContext(Context);
-    function returnAvarage(low,high){
-        return Math.round((low+high)/2);
-    }
     return (
         <div className="tableau">   
             <div className="main-data">
                 <div className="temperature">
                     <h1>
-                    {wheater.current_observation.condition.temperature}º
+                    {parseToCelcius(wheater.current_observation.condition.temperature)}º
                     </h1>
                 </div>
                 <div className="condition">
@@ -26,9 +28,9 @@ function Tableau() {
                         -
                         {wheater.location.country}    
                     </p>
-                    <span>
+                    <h2>
                         {wheater.current_observation.condition.text}
-                    </span>
+                    </h2>
                 </div>
             </div>
             <div className="sub-data">
@@ -38,7 +40,7 @@ function Tableau() {
                                 key={i} 
                                 day={item.day}
                                 condition={item.code}
-                                temperature={returnAvarage(item.low,item.high)}
+                                temperature={parseToCelcius(returnAverage(item.low,item.high))}
                                 />
                     })}
                 </div>

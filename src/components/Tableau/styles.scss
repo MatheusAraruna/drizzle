@@ -1,66 +1,87 @@
 @import '../../styles/colors.scss';
 
 .tableau{
-    display: block;
+    position: relative;
     max-width: 1280px;
-    height: calc(100% - 150px);
-    margin:0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    margin:15% auto 0;
     > div{
-        width: calc(100% - 40px);
         margin:0 20px;
-        display: flex;
     }
     .main-data{
-        align-items: center;
-        justify-content: flex-start;
+        align-items: flex-end;
+        display: flex;
         gap:50px;
         .temperature{
             h1{
-                font-size: 288px;
+                font-size: 25vh;
                 color:var(--white);
             }
         }
         .condition{
+            margin-bottom: 27px;
             p{
-                font-size:48px;
+                font-size:4.5vh;
                 color:var(--black);
-                > svg{
-                    font-size: 35px !important;
-                    margin-right: 15px;
+                svg{
+                    font-size: 3.2vh;
+                    margin-right: 10px;
                 }
             }
-            span{
-                font-size: 144px;
+            h2{
+                font-size: 10vh;
                 color:var(--white);
             }
         }
     }
     .sub-data{
+        display: flex;
+        flex-wrap: wrap;
         align-items: center;
+        justify-content: flex-start;
+        padding-bottom: 50px;
+        gap:50px;
         .forecasts{
             display: flex;
-            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 5px;
         }
         .observations{
-            margin-left:50px;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap:20px 50px;
-            div{
-                span{
-                    color:var(--yellow);
-                    font-size: 24px;
-                }
-                p{
-                    margin-left:10px;
-                    font-size:14px;
-                    color:var(--white);
+            span{
+                font-size: 24px;
+                color:var(--yellow);
+            }
+            p{
+                font-size: 16px;
+                margin-left: 10px;
+                color:var(--white);
+            }
+        }
+    }
+    @media only screen and (max-width:1024px){
+        margin:0 auto;
+        > div{
+            margin:0 10px;
+        }
+        .main-data{
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap:10px;
+            text-align: center;
+            .condition{
+                h2{
+                    font-size:8vh;
                 }
             }
+        }
+        .sub-data{
+            flex-direction: column;
+            align-items:center;
         }
     }
 }
