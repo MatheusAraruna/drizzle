@@ -1,85 +1,86 @@
 @import '../../styles/colors.scss';
-
 .bar{
-    position: relative;
-    display: block;
     max-width: 1280px;
     min-width: 250px;
     margin:0 auto;
-    form{
-        width: calc(100% - 40px);
-        height: 100vh;
-        margin:0 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
+    overflow:hidden;
+   form{
+        max-width: 1280px;
+        display: grid;
+        text-align: center;
+        grid-template-columns: 1fr;
+        gap:20px;
+        margin:50vh auto 0;
+        padding: 0 10px;
+        transform: translateY(-50%);
+        input, button{
+            border:none;
+            outline: none;
+            text-transform: uppercase;
+            height: 50px;
+            width: 100%;
+            max-width: 900px;
+            margin:0 auto;
+        }
         h1{
-            font-size: 15vh;
             color:var(--white);
+            font-size:15vh;
         }
         p{
-            max-width: 650px;
-            font-size: 4vh;
-            text-align: center;
-            color: var(--white);
-            margin-bottom: 40px;
+            font-size: 22px;
+            color:var(--white);
             b{
                 color:var(--yellow);
             }
         }
-        input, button{
-            width: 100%;
-            min-width: 100px;
-            height: 70px;
-            font-size: 24px;
-            border:none;
-            text-transform: uppercase;
-        }
         input{
-            max-width: 850px;
+            border:none;
+            background:none;
             text-align: center;
-            background: none;
-            border-bottom:10px solid var(--yellow);
-            outline: none;
-            cursor:context-menu;
+            border-bottom:3px solid var(--yellow);
             color:var(--white);
             &::placeholder{
                 color:var(--gray);
             }
         }
         button{
-            max-width: 350px;
-            background:var(--yellow);
+            background: var(--yellow);
             color:var(--blue);
-            border-radius: 2px;
-            cursor: pointer;
         }
     }
-    &.bar-active{
-        margin:20px auto;
+   &.active-bar{
         form{
-            flex-direction: row;
-            height: auto;
+            grid-template-columns: 75px auto 75px;
+            gap:5px;
             align-items: flex-end;
-            gap:50px;
+            transform: translateY(0);
+            margin:20px auto;
+            input, button{
+                max-width: 1280px;
+            }
             h1{
-                font-size:6vh;
+                font-size: 24px;
             }
             p{
                 display: none;
             }
-            input, button{
-                height: 40px;
-                font-size: 20px;
-            }
-            input{
-                border-width: 5px;
-            }
-            button{
-                max-width: 200px;
+            input,button{
+                height: 30px;
             }
         }
     }
+    @media only screen and (min-width:768px){
+        &.active-bar{
+            form{
+                grid-template-columns: 150px auto 150px;
+                h1{
+                    font-size:38px ;
+                }
+                input, button{
+                    height: 40px;
+                    font-size: 20px;
+                }
+            }
+       }
+    }  
 }

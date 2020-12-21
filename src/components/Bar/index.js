@@ -11,12 +11,10 @@ function Bar() {
         request(data.city)
     }
     return (
-        <div className={`bar ${active ? 'bar-active':''}`}>
+        <div className={`bar ${active ? 'active-bar':''}`}>
             <form className="search-bar" onSubmit={handleSubmit(onSubmit)}>
                 <h1>DRIZZLE</h1>
-                <p>
-                Consulte sobre os dados climaticos de sua cidade no <b>DRIZZLE</b>
-                </p>
+                <p>Consulte sobre os dados climaticos de sua cidade no <b>DRIZZLE</b></p>    
                 <input ref={register({required:true})} name="city" type="text" placeholder="nome da cidade" />
                 <button type="submit">pesquisar</button>
             </form>

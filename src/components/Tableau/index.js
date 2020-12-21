@@ -14,12 +14,7 @@ function Tableau() {
     return (
         <div className="tableau">   
             <div className="main-data">
-                <div className="temperature">
-                    <h1>
-                    {parseToCelcius(wheater.current_observation.condition.temperature)}º
-                    </h1>
-                </div>
-                <div className="condition">
+                <div className="location">
                     <p>
                         <FaMapMarkerAlt />
                         {wheater.location.city}
@@ -28,6 +23,13 @@ function Tableau() {
                         -
                         {wheater.location.country}    
                     </p>
+                </div>
+                <div className="temperature">
+                    <h1>
+                    {parseToCelcius(wheater.current_observation.condition.temperature)}º
+                    </h1>
+                </div>
+                <div className="condition">
                     <h2>
                         {wheater.current_observation.condition.text}
                     </h2>

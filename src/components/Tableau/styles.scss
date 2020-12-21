@@ -3,14 +3,23 @@
 .tableau{
     position: relative;
     max-width: 1280px;
-    margin:15% auto 0;
+    padding:0 20px;
+    margin:5vh auto 0;
     > div{
-        margin:0 20px;
+        width: 100%;
+        margin:0 auto;
     }
     .main-data{
-        align-items: flex-end;
-        display: flex;
-        gap:50px;
+        width: 100%;
+        text-align: center;
+        .location{
+            color:var(--black);
+            font-size: 1.5rem;
+            svg{
+                font-size:1rem;
+                margin-right:5px;
+            }
+        }
         .temperature{
             h1{
                 font-size: 25vh;
@@ -18,70 +27,41 @@
             }
         }
         .condition{
-            margin-bottom: 27px;
-            p{
-                font-size:4.5vh;
-                color:var(--black);
-                svg{
-                    font-size: 3.2vh;
-                    margin-right: 10px;
-                }
-            }
             h2{
-                font-size: 10vh;
+                font-size: 8vh;
                 color:var(--white);
             }
         }
     }
     .sub-data{
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: flex-start;
-        padding-bottom: 50px;
-        gap:50px;
+        margin-top:40px;
         .forecasts{
             display: flex;
-            align-items: center;
-            justify-content: center;
             flex-wrap: wrap;
-            gap: 5px;
+            justify-content: center;
+            gap:3px;
         }
         .observations{
+            margin:30px auto;
+            max-width: 400px;
+            text-align: center;
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap:20px 50px;
+            grid-template-columns:1fr 1fr;
+            gap:20px;
+
             span{
-                font-size: 24px;
+                font-size:18px;
                 color:var(--yellow);
             }
             p{
-                font-size: 16px;
-                margin-left: 10px;
+                font-size:14px;
                 color:var(--white);
             }
         }
     }
+
+
     @media only screen and (max-width:1024px){
-        margin:0 auto;
-        > div{
-            margin:0 10px;
-        }
-        .main-data{
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap:10px;
-            text-align: center;
-            .condition{
-                h2{
-                    font-size:8vh;
-                }
-            }
-        }
-        .sub-data{
-            flex-direction: column;
-            align-items:center;
-        }
+       margin:10px auto;
     }
 }
