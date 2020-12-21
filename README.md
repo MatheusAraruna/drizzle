@@ -12,6 +12,6 @@ $ cd /drizzle
 $ yarn install && yarn start
 ```
 ou pelo NPM
-```
+```sh
 $ npm install && npm start
 ```
