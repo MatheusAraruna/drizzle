@@ -13,5 +13,5 @@ $ yarn install && yarn start
 ```
 ou pelo NPM
 ```
-npm install && npm start
+$ npm install && npm start
 ```
