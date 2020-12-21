@@ -1,5 +1,5 @@
 # Drizzle
-Dados climaticos, utilizando a API do [Yahoo Wheater](https://https://developer.yahoo.com/weather/documentation.html)
+Dados climaticos, utilizando a API do [Yahoo Wheater](https://developer.yahoo.com/weather/documentation.html)
 
 ### Instalar
 Projeto requer [Node.js](https://nodejs.org/) v12+ para ser executado.
